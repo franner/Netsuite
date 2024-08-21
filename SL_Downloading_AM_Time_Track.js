@@ -1,76 +1,67 @@
 /**
  * @NApiVersion 2.x
  * @NScriptType Suitelet
+ * @NAmdConfig /SuiteScripts/ThirdParty/JsLibraryConfig.json
  */
-define(['N/search', 'N/format'], 
-function(search, format) {
+define(['N/search', 'N/format', 'xlsx'], 
+function(search, format, XLSX) {
 
     function onRequest(context) {
         var response = context.response;
+        
+        // Set headers for XLSX download
         response.setHeader({
             name: 'Content-Type',
-            value: 'text/csv'
+            value: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
         });
         response.setHeader({
             name: 'Content-Disposition',
-            value: 'attachment; filename="SavedSearchReport.csv"'
+            value: 'attachment; filename="SavedSearchReport.xlsx"'
         });
 
-        // Fetch and write search results with dynamic headers
-        processSavedSearchData(response);
+        // Fetch and write search results to an XLSX file
+        processSavedSearchData(response, XLSX);
     }
 
-    function processSavedSearchData(response) {
+    function processSavedSearchData(response, XLSX) {
         // Load the saved search by its internal ID
-        var savedSearch = search.load({
-            id: '1431'
-        });
+        var savedSearch = search.load({ id: '1431' });
 
-        // Write the CSV headers dynamically
+        // Initialize a new workbook
+        var workbook = XLSX.utils.book_new();
+        var worksheetData = [];
+
+        // Add the headers
         var headers = savedSearch.columns.map(function(column) {
             return column.label || column.name; // Use label if available, otherwise fallback to name
-        }).join(';') + '\n';
-        response.write(headers);
-
-        // Run the search and process each result
-        var searchResult = savedSearch.run();
-        var start = 0;
-        var results = searchResult.getRange({
-            start: start,
-            end: start + 1000
         });
+        worksheetData.push(headers);
 
-        while (results.length > 0) {
-            results.forEach(function(result) {
-                var line = savedSearch.columns.map(function(column, index) {
-                    // Use getText for textual representation where applicable
+        // Use search.runPaged() to handle large datasets
+        var pagedData = savedSearch.runPaged({ pageSize: 1000 });
+
+        pagedData.pageRanges.forEach(function(pageRange) {
+            var page = pagedData.fetch({ index: pageRange.index });
+            page.data.forEach(function(result) {
+                var row = savedSearch.columns.map(function(column) {
                     return result.getText(column) || result.getValue(column);
-                }).join(';') + '\n';
-
-                response.write(line); // Write each line immediately
+                });
+                worksheetData.push(row);
             });
-
-            // Move to the next set of results
-            start += 1000;
-            results = searchResult.getRange({
-                start: start,
-                end: start + 1000
-            });
-        }
-    }
-
-    function formatDate(dateValue) {
-        if (!dateValue) return '';
-        return format.format({
-            value: dateValue,
-            type: format.Type.DATE
         });
-    }
 
-    function formatAmount(amount) {
-        if (!amount) return '0.00';
+        // Create the worksheet and append it to the workbook
+        var worksheet = XLSX.utils.aoa_to_sheet(worksheetData);
+        XLSX.utils.book_append_sheet(workbook, worksheet, 'Report');
 
-        return parseFloat(amount).toFixed(2);
+        // Generate the XLSX file in base64 format
+        var xlsxData = XLSX.write(workbook, { bookType: 'xlsx', type: 'base64' });
+
+        // Write the base64 string directly to the response
+        response.write({
+            output: xlsxData,
+            encoding: 'base64' // Use 'base64' encoding
+        });
     }
 
     return {
