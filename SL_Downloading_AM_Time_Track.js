@@ -42,15 +42,28 @@ function(search, file, format) {
                 invoiceLines.push({
                     BADGE_NUMBER: result.getValue({ name: 'custrecordbadge' }),
                     EMPLOYEE: result.getText({ name: 'custrecordemployee' }),
-                    START_TIME: formatAmount(result.getValue({ name: 'custrecordstarttime' })),
-                    END_TIME: formatAmount(result.getValue({ name: 'custrecordendtime' })),
-                    DEPARTMENT: formatAmount(result.getValue({ name: 'custrecorddepartment' })),
+                    START_TIME: formatDate(result.getValue({ name: 'custrecordstarttime' })),
+                    END_TIME: formatDate(result.getValue({ name: 'custrecordendtime' })),
+                    DEPARTMENT: result.getText({ name: 'custrecorddepartment' }),
                     HOURS: formatAmount(result.getValue({ name: 'custrecordhours' }))
                 });
             });
         });
 
         return invoiceLines;
+    }
+
+    /**
+     * Formats the date value to a readable format.
+     * @param {string} dateValue - The date value as a string
+     * @returns {string} - The formatted date
+     */
+    function formatDate(dateValue) {
+        if (!dateValue) return '';
+        return format.format({
+            value: dateValue,
+            type: format.Type.DATE
+        });
     }
 
     /**
