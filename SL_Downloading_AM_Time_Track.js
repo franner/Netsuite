@@ -28,19 +28,37 @@ function(search, file, format) {
         var pageSize = 1000;
         var hasMoreData = true;
 
-        while (hasMoreData) {
-            var invoiceSearch = search.create({
-                type: 'customrecordtimetrack',
-                columns: [
-                    'custrecordbadge',
-                    'custrecordemployee',
-                    'custrecordstarttime',
-                    'custrecordendtime',
-                    'custrecorddepartment',
-                    'custrecordhours'
-                ]
-            });
+        // Calculate the start of yesterday and format it
+        var yesterday = new Date();
+        yesterday.setDate(yesterday.getDate() - 1000);
+        yesterday.setHours(0, 0, 0, 0);
 
+        var formattedYesterday = format.format({
+            value: yesterday,
+            type: format.Type.DATE
+        });
+
+        // Create a search with a filter for start time after yesterday
+        var invoiceSearch = search.create({
+            type: 'customrecordtimetrack',
+            filters: [
+                search.createFilter({
+                    name: 'custrecordstarttime',
+                    operator: search.Operator.AFTER,
+                    values: formattedYesterday
+                })
+            ],
+            columns: [
+                'custrecordbadge',
+                'custrecordemployee',
+                'custrecordstarttime',
+                'custrecordendtime',
+                'custrecorddepartment',
+                'custrecordhours'
+            ]
+        });
+
+        while (hasMoreData) {
             var pagedData = invoiceSearch.runPaged({
                 pageSize: pageSize
             });
