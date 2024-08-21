@@ -16,10 +16,7 @@ function(search, format) {
             value: 'attachment; filename="SavedSearchReport.csv"'
         });
 
-        // Writing CSV headers
-        response.write('Column1;Column2;Column3;Column4;Column5;Column6\n');
-
-        // Fetch and write search results
+        // Fetch and write search results with dynamic headers
         processSavedSearchData(response);
     }
 
@@ -28,6 +25,12 @@ function(search, format) {
         var savedSearch = search.load({
             id: '1431'
         });
+
+        // Write the CSV headers dynamically
+        var headers = savedSearch.columns.map(function(column) {
+            return column.label || column.name; // Use label if available, otherwise fallback to name
+        }).join(';') + '\n';
+        response.write(headers);
 
         // Run the search and process each result
         var searchResult = savedSearch.run();
@@ -39,14 +42,10 @@ function(search, format) {
 
         while (results.length > 0) {
             results.forEach(function(result) {
-                var line = [
-                    result.getValue(savedSearch.columns[0]),
-                    result.getValue(savedSearch.columns[1]),
-                    formatDate(result.getValue(savedSearch.columns[2])),
-                    formatDate(result.getValue(savedSearch.columns[3])),
-                    result.getText(savedSearch.columns[4]),
-                    formatAmount(result.getValue(savedSearch.columns[5]))
-                ].join(';') + '\n';
+                var line = savedSearch.columns.map(function(column, index) {
+                    // Use getText for textual representation where applicable
+                    return result.getText(column) || result.getValue(column);
+                }).join(';') + '\n';
 
                 response.write(line); // Write each line immediately
             });
