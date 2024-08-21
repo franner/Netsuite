@@ -2,63 +2,59 @@
  * @NApiVersion 2.x
  * @NScriptType Suitelet
  */
-define(['N/search', 'N/file', 'N/ui/serverWidget'], 
-function(search, file, serverWidget) {
+define(['N/search', 'N/file', 'N/format', 'N/encode'], 
+function(search, file, format, encode) {
 
     function onRequest(context) {
-        if (context.request.method === 'GET') {
-            renderForm(context);
-        } else {
-            generateReport(context);
+        var request = context.request;
+        
+        // Extract start and end date from URL parameters
+        var startDateParam = request.parameters.startdate;
+        var endDateParam = request.parameters.enddate;
+
+        // Validate and parse the dates from ddmmyyyy format
+        var startDate = parseDate(startDateParam);
+        var endDate = parseDate(endDateParam);
+
+        if (!startDate || !endDate) {
+            context.response.write("Invalid date format. Please use 'ddmmyyyy' format.");
+            return;
         }
-    }
 
-    /**
-     * Renders the form with start and end date fields.
-     * @param {Object} context - The context object provided by the Suitelet
-     */
-    function renderForm(context) {
-        var form = serverWidget.createForm({
-            title: 'Invoice Report'
-        });
-
-        form.addField({
-            id: 'custpage_startdate',
-            type: serverWidget.FieldType.DATE,
-            label: 'Start Date'
-        });
-
-        form.addField({
-            id: 'custpage_enddate',
-            type: serverWidget.FieldType.DATE,
-            label: 'End Date'
-        });
-
-        form.addSubmitButton({
-            label: 'Generate Report'
-        });
-
-        context.response.writePage(form);
-    }
-
-    /**
-     * Generates the invoice report CSV and triggers download.
-     * @param {Object} context - The context object provided by the Suitelet
-     */
-    function generateReport(context) {
-        var startDate = context.request.parameters.custpage_startdate;
-        var endDate = context.request.parameters.custpage_enddate;
-
+        // Generate and serve the CSV report
         var invoiceData = getInvoiceData(startDate, endDate);
         var csvContent = createCSVContent(invoiceData);
-
         serveCSVFile(context, csvContent);
     }
 
     /**
+     * Parses a date string in 'ddmmyyyy' format into a Date object.
+     * @param {string} dateString - The date string in 'ddmmyyyy' format
+     * @returns {Date|null} - The Date object or null if invalid
+     */
+    function parseDate(dateString) {
+        if (!dateString || dateString.length !== 8) return null;
+
+        var day = dateString.substring(0, 2);
+        var month = dateString.substring(2, 4);
+        var year = dateString.substring(4, 8);
+
+        var dateObj = new Date(year, month - 1, day);
+
+        // Validate the date object
+        if (dateObj && dateObj.getFullYear() === parseInt(year) &&
+            dateObj.getMonth() === parseInt(month) - 1 &&
+            dateObj.getDate() === parseInt(day)) {
+            return format.format({ value: dateObj, type: format.Type.DATE });
+        }
+
+        return null;
+    }
+
+    /**
      * Runs a search to retrieve only the main lines of invoices within the date range.
-     * @param {string} startDate - The start date for the search
-     * @param {string} endDate - The end date for the search
+     * @param {string} startDate - The start date for the search (formatted)
+     * @param {string} endDate - The end date for the search (formatted)
      * @returns {Array} - An array containing main line invoice data
      */
     function getInvoiceData(startDate, endDate) {
