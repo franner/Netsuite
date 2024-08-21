@@ -16,7 +16,7 @@ function(search, format, XLSX) {
         });
         response.setHeader({
             name: 'Content-Disposition',
-            value: 'attachment; filename="SavedSearchReport.xlsx"'
+            value: 'attachment; filename="TimeTrackReport.xlsx"'
         });
 
         // Fetch and write search results to an XLSX file
@@ -24,26 +24,39 @@ function(search, format, XLSX) {
     }
 
     function processSavedSearchData(response, XLSX) {
-        // Load the saved search by its internal ID
-        var savedSearch = search.load({ id: '1431' });
+        // Create the custom search
+        var customrecordtimetrackSearchObj = search.create({
+            type: "customrecordtimetrack",
+            filters: [
+                ["custrecordstarttime", "after", "startoflastmonth"]
+            ],
+            columns: [
+                search.createColumn({ name: "custrecordbadge", label: "BADGE_NUMBER" }),
+                search.createColumn({ name: "custrecordemployee", label: "EMPLOYEE" }),
+                search.createColumn({ name: "custrecordstarttime", label: "START_TIME" }),
+                search.createColumn({ name: "custrecordendtime", label: "END_TIME" }),
+                search.createColumn({ name: "custrecorddepartment", label: "DEPARTMENT" }),
+                search.createColumn({ name: "custrecordhours", label: "HOURS" })
+            ]
+        });
 
         // Initialize a new workbook
         var workbook = XLSX.utils.book_new();
         var worksheetData = [];
 
         // Add the headers
-        var headers = savedSearch.columns.map(function(column) {
+        var headers = customrecordtimetrackSearchObj.columns.map(function(column) {
             return column.label || column.name; // Use label if available, otherwise fallback to name
         });
         worksheetData.push(headers);
 
         // Use search.runPaged() to handle large datasets
-        var pagedData = savedSearch.runPaged({ pageSize: 1000 });
+        var pagedData = customrecordtimetrackSearchObj.runPaged({ pageSize: 1000 });
 
         pagedData.pageRanges.forEach(function(pageRange) {
             var page = pagedData.fetch({ index: pageRange.index });
             page.data.forEach(function(result) {
-                var row = savedSearch.columns.map(function(column) {
+                var row = customrecordtimetrackSearchObj.columns.map(function(column) {
                     return result.getText(column) || result.getValue(column);
                 });
                 worksheetData.push(row);
@@ -52,7 +65,7 @@ function(search, format, XLSX) {
 
         // Create the worksheet and append it to the workbook
         var worksheet = XLSX.utils.aoa_to_sheet(worksheetData);
-        XLSX.utils.book_append_sheet(workbook, worksheet, 'Report');
+        XLSX.utils.book_append_sheet(workbook, worksheet, 'TimeTrackReport');
 
         // Generate the XLSX file in base64 format
         var xlsxData = XLSX.write(workbook, { bookType: 'xlsx', type: 'base64' });
