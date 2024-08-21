@@ -20,7 +20,7 @@ function(search, file, format) {
         var invoiceLines = [];
 
         var invoiceSearch = search.create({
-            type: search.Type.customrecordtimetrack,
+            type: 'customrecordtimetrack', // Ensure correct internal ID is used here
             columns: [
                 'custrecordbadge',
                 'custrecordemployee',
@@ -31,17 +31,23 @@ function(search, file, format) {
             ]
         });
 
-        invoiceSearch.run().each(function(result) {
-            invoiceLines.push({
-                BADGE_NUMBER: result.getValue({ name: 'custrecordbadge' }),
-                EMPLOYEE: result.getText({ name: 'custrecordemployee' }),
-                START_TIME: formatAmount(result.getValue({ name: 'custrecordstarttime' })),
-                END_TIME: formatAmount(result.getValue({ name: 'custrecordendtime' })),
-                DEPARTMENT: formatAmount(result.getValue({ name: 'custrecorddepartment' })),
-                HOURS: formatAmount(result.getValue({ name: 'custrecordhours' }))
-            });
+        // Use runPaged to handle large result sets in smaller pages (chunks) of 1000 results at a time
+        var pagedData = invoiceSearch.runPaged({
+            pageSize: 1000
+        });
 
-            return true; // Continue iterating over search results
+        pagedData.pageRanges.forEach(function(pageRange) {
+            var page = pagedData.fetch({ index: pageRange.index });
+            page.data.forEach(function(result) {
+                invoiceLines.push({
+                    BADGE_NUMBER: result.getValue({ name: 'custrecordbadge' }),
+                    EMPLOYEE: result.getText({ name: 'custrecordemployee' }),
+                    START_TIME: formatAmount(result.getValue({ name: 'custrecordstarttime' })),
+                    END_TIME: formatAmount(result.getValue({ name: 'custrecordendtime' })),
+                    DEPARTMENT: formatAmount(result.getValue({ name: 'custrecorddepartment' })),
+                    HOURS: formatAmount(result.getValue({ name: 'custrecordhours' }))
+                });
+            });
         });
 
         return invoiceLines;
@@ -72,7 +78,7 @@ function(search, file, format) {
      * @returns {string} - The CSV content as a string
      */
     function createCSVContent(invoiceLines) {
-        var csvRows = [['Invoice Number', 'Currency', 'Foreign Amount']];
+        var csvRows = [['Badge Number', 'Employee', 'Start Time', 'End Time', 'Department', 'Hours']];
 
         invoiceLines.forEach(function(line) {
             csvRows.push([
