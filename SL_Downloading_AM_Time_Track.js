@@ -6,55 +6,17 @@ define(['N/search', 'N/file', 'N/format'],
 function(search, file, format) {
 
     function onRequest(context) {
-        var request = context.request;
-
-        // Extract start and end date from URL parameters
-        var startDateParam = request.parameters.startdate;
-        var endDateParam = request.parameters.enddate;
-
-        // Validate and parse the dates from ddmmyyyy format
-        var startDate = parseDate(startDateParam);
-        var endDate = parseDate(endDateParam);
-
-        if (!startDate || !endDate) {
-            context.response.write("Invalid date format. Please use 'ddmmyyyy' format.");
-            return;
-        }
-
         // Generate and serve the CSV report
-        var invoiceData = getInvoiceData(startDate, endDate);
+        var invoiceData = getInvoiceData();
         var csvContent = createCSVContent(invoiceData);
         serveCSVFile(context, csvContent);
     }
 
     /**
-     * Parses a date string in 'ddmmyyyy' format into a formatted Date string in 'MM/dd/yyyy'.
-     * @param {string} dateString - The date string in 'ddmmyyyy' format
-     * @returns {string|null} - The formatted date string (MM/dd/yyyy) or null if invalid
-     */
-    function parseDate(dateString) {
-        if (!dateString || dateString.length !== 8) return null;
-
-        var day = dateString.substring(0, 2);
-        var month = dateString.substring(2, 4);
-        var year = dateString.substring(4, 8);
-
-        // Validate the numeric values of day, month, and year
-        if (isNaN(day) || isNaN(month) || isNaN(year) || day > 31 || month > 12 || year.length !== 4) {
-            return null;
-        }
-
-        // Return the date in MM/dd/yyyy format
-        return month + '/' + day + '/' + year;
-    }
-
-    /**
-     * Runs a search to retrieve only the main lines of invoices within the date range.
-     * @param {string} startDate - The start date for the search (MM/dd/yyyy format)
-     * @param {string} endDate - The end date for the search (MM/dd/yyyy format)
+     * Runs a search to retrieve only the main lines of invoices.
      * @returns {Array} - An array containing main line invoice data
      */
-    function getInvoiceData(startDate, endDate) {
+    function getInvoiceData() {
         var invoiceLines = [];
 
         var invoiceSearch = search.create({
