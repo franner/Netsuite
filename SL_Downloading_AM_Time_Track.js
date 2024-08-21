@@ -2,8 +2,8 @@
  * @NApiVersion 2.x
  * @NScriptType Suitelet
  */
-define(['N/search', 'N/file', 'N/format'], 
-function(search, file, format) {
+define(['N/search', 'N/format'], 
+function(search, format) {
 
     function onRequest(context) {
         var response = context.response;
@@ -13,77 +13,50 @@ function(search, file, format) {
         });
         response.setHeader({
             name: 'Content-Disposition',
-            value: 'attachment; filename="AM_Time_Track_report.csv"'
+            value: 'attachment; filename="SavedSearchReport.csv"'
         });
 
         // Writing CSV headers
-        response.write('Badge Number;Employee;Start Time;End Time;Department;Hours\n');
+        response.write('Column1;Column2;Column3;Column4;Column5;Column6\n');
 
-        // Process data in chunks
-        processInvoiceData(response);
+        // Fetch and write search results
+        processSavedSearchData(response);
     }
 
-    function processInvoiceData(response) {
-        var pageIndex = 0;
-        var pageSize = 1000;
-        var hasMoreData = true;
-
-        // Calculate the start of yesterday and format it
-        var yesterday = new Date();
-        yesterday.setDate(yesterday.getDate() - 1000);
-        yesterday.setHours(0, 0, 0, 0);
-
-        var formattedYesterday = format.format({
-            value: yesterday,
-            type: format.Type.DATE
+    function processSavedSearchData(response) {
+        // Load the saved search by its internal ID
+        var savedSearch = search.load({
+            id: '1431'
         });
 
-        // Create a search with a filter for start time after yesterday
-        var invoiceSearch = search.create({
-            type: 'customrecordtimetrack',
-            filters: [
-                search.createFilter({
-                    name: 'custrecordstarttime',
-                    operator: search.Operator.AFTER,
-                    values: formattedYesterday
-                })
-            ],
-            columns: [
-                'custrecordbadge',
-                'custrecordemployee',
-                'custrecordstarttime',
-                'custrecordendtime',
-                'custrecorddepartment',
-                'custrecordhours'
-            ]
+        // Run the search and process each result
+        var searchResult = savedSearch.run();
+        var start = 0;
+        var results = searchResult.getRange({
+            start: start,
+            end: start + 1000
         });
 
-        while (hasMoreData) {
-            var pagedData = invoiceSearch.runPaged({
-                pageSize: pageSize
-            });
-
-            if (pageIndex >= pagedData.pageRanges.length) {
-                hasMoreData = false;
-                break;
-            }
-
-            var page = pagedData.fetch({ index: pageIndex });
-            page.data.forEach(function(result) {
+        while (results.length > 0) {
+            results.forEach(function(result) {
                 var line = [
-                    result.getValue({ name: 'custrecordbadge' }),
-                    result.getText({ name: 'custrecordemployee' }),
-                    formatDate(result.getValue({ name: 'custrecordstarttime' })),
-                    formatDate(result.getValue({ name: 'custrecordendtime' })),
-                    result.getText({ name: 'custrecorddepartment' }),
-                    formatAmount(result.getValue({ name: 'custrecordhours' }))
+                    result.getValue(savedSearch.columns[0]),
+                    result.getValue(savedSearch.columns[1]),
+                    formatDate(result.getValue(savedSearch.columns[2])),
+                    formatDate(result.getValue(savedSearch.columns[3])),
+                    result.getText(savedSearch.columns[4]),
+                    formatAmount(result.getValue(savedSearch.columns[5]))
                 ].join(';') + '\n';
-                
+
                 response.write(line); // Write each line immediately
             });
 
-            // Move to the next page
-            pageIndex++;
+            // Move to the next set of results
+            start += 1000;
+            results = searchResult.getRange({
+                start: start,
+                end: start + 1000
+            });
         }
     }
 
@@ -96,15 +69,9 @@ function(search, file, format) {
     }
 
     function formatAmount(amount) {
-        if (!amount) return '0,00';
+        if (!amount) return '0.00';
 
-        var parts = parseFloat(amount).toFixed(2).split('.');
-        var integerPart = parts[0];
-        var decimalPart = parts[1];
-
-        integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-
-        return integerPart + ',' + decimalPart;
+        return parseFloat(amount).toFixed(2);
     }
 
     return {
