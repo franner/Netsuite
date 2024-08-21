@@ -28,9 +28,9 @@ function(search, file, format) {
     }
 
     /**
-     * Parses a date string in 'ddmmyyyy' format into a formatted Date string.
+     * Parses a date string in 'ddmmyyyy' format into a formatted Date string in 'MM/dd/yyyy'.
      * @param {string} dateString - The date string in 'ddmmyyyy' format
-     * @returns {string|null} - The formatted date string (yyyy-mm-dd) or null if invalid
+     * @returns {string|null} - The formatted date string (MM/dd/yyyy) or null if invalid
      */
     function parseDate(dateString) {
         if (!dateString || dateString.length !== 8) return null;
@@ -44,21 +44,14 @@ function(search, file, format) {
             return null;
         }
 
-        // Convert to standard date format yyyy-mm-dd
-        var formattedDate = year + '-' + month + '-' + day;
-
-        // Validate and format the date using NetSuite's format module
-        try {
-            return format.format({ value: formattedDate, type: format.Type.DATE });
-        } catch (e) {
-            return null;
-        }
+        // Return the date in MM/dd/yyyy format
+        return month + '/' + day + '/' + year;
     }
 
     /**
      * Runs a search to retrieve only the main lines of invoices within the date range.
-     * @param {string} startDate - The start date for the search (formatted)
-     * @param {string} endDate - The end date for the search (formatted)
+     * @param {string} startDate - The start date for the search (MM/dd/yyyy format)
+     * @param {string} endDate - The end date for the search (MM/dd/yyyy format)
      * @returns {Array} - An array containing main line invoice data
      */
     function getInvoiceData(startDate, endDate) {
