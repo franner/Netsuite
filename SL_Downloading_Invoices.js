@@ -2,12 +2,12 @@
  * @NApiVersion 2.x
  * @NScriptType Suitelet
  */
-define(['N/search', 'N/file', 'N/format', 'N/encode'], 
-function(search, file, format, encode) {
+define(['N/search', 'N/file', 'N/format'], 
+function(search, file, format) {
 
     function onRequest(context) {
         var request = context.request;
-        
+
         // Extract start and end date from URL parameters
         var startDateParam = request.parameters.startdate;
         var endDateParam = request.parameters.enddate;
@@ -28,9 +28,9 @@ function(search, file, format, encode) {
     }
 
     /**
-     * Parses a date string in 'ddmmyyyy' format into a Date object.
+     * Parses a date string in 'ddmmyyyy' format into a formatted Date string.
      * @param {string} dateString - The date string in 'ddmmyyyy' format
-     * @returns {Date|null} - The Date object or null if invalid
+     * @returns {string|null} - The formatted date string (yyyy-mm-dd) or null if invalid
      */
     function parseDate(dateString) {
         if (!dateString || dateString.length !== 8) return null;
@@ -39,16 +39,20 @@ function(search, file, format, encode) {
         var month = dateString.substring(2, 4);
         var year = dateString.substring(4, 8);
 
-        var dateObj = new Date(year, month - 1, day);
-
-        // Validate the date object
-        if (dateObj && dateObj.getFullYear() === parseInt(year) &&
-            dateObj.getMonth() === parseInt(month) - 1 &&
-            dateObj.getDate() === parseInt(day)) {
-            return format.format({ value: dateObj, type: format.Type.DATE });
+        // Validate the numeric values of day, month, and year
+        if (isNaN(day) || isNaN(month) || isNaN(year) || day > 31 || month > 12 || year.length !== 4) {
+            return null;
         }
 
-        return null;
+        // Convert to standard date format yyyy-mm-dd
+        var formattedDate = year + '-' + month + '-' + day;
+
+        // Validate and format the date using NetSuite's format module
+        try {
+            return format.format({ value: formattedDate, type: format.Type.DATE });
+        } catch (e) {
+            return null;
+        }
     }
 
     /**
