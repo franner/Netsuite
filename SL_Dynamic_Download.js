@@ -1,19 +1,3 @@
-// USAGE
-// 
-// "exclusionFilters": [["custrecordemployee", "is", "John Doe"], ["custrecorddepartment", "is", "HR"]]
-// 
-// {
-//     "typeName": "customrecordtimetrack",
-//     "filters": [["custrecordstarttime", "after", "startoflastmonth"]],
-//     "exclusionFilters": [["custrecordemployee", "is", "John Doe"], ["custrecorddepartment", "is", "HR"]],
-//     "columns": [
-//         { "name": "custrecordbadge", "label": "BADGE_NUMBER" },
-//         { "name": "custrecordemployee", "label": "EMPLOYEE" },
-//         { "name": "custrecordstarttime", "label": "START_TIME" }
-//     ]
-// }
-// 
-
 /**
  * @NApiVersion 2.x
  * @NScriptType Suitelet
@@ -22,38 +6,51 @@
 define(['N/search', 'N/format', 'xlsx'], 
        
 function(search, format, XLSX) {
-        var FileName = "Dynamic_Report.xlsx";
-        var WorkbookName = 'Dynamic_Report';
+    var FileName = "Dynamic_Report.xlsx";
+    var WorkbookName = 'Dynamic_Report';
 
     function onRequest(context) {
         var request = context.request;
         var response = context.response;
 
-        // Retrieve parameters from the request
-        var typeName = request.parameters.typeName;
-        var filters = JSON.parse(request.parameters.filters || '[]');
-        var exclusionFilters = JSON.parse(request.parameters.exclusionFilters || '[]');
-        var columns = JSON.parse(request.parameters.columns || '[]');
+        try {
+            // Retrieve parameters from the request
+            var typeName = request.parameters.typeName;
+            var filters = JSON.parse(request.parameters.filters || '[]');
+            var exclusionFilters = JSON.parse(request.parameters.exclusionFilters || '[]');
+            var columns = JSON.parse(request.parameters.columns || '[]');
 
-        // Apply exclusion filters if provided
-        if (exclusionFilters.length > 0) {
-            exclusionFilters.forEach(function(exclusionFilter) {
-                filters.push(['NOT', exclusionFilter]);
+            // Validate required parameters
+            if (!typeName || columns.length === 0) {
+                throw new Error("Invalid input: typeName and columns are required.");
+            }
+
+            // Apply exclusion filters if provided
+            if (exclusionFilters.length > 0) {
+                exclusionFilters.forEach(function(exclusionFilter) {
+                    if (Array.isArray(exclusionFilter) && exclusionFilter.length === 3) {
+                        filters.push(['NOT', exclusionFilter]);
+                    } else {
+                        throw new Error("Invalid exclusion filter format.");
+                    }
+                });
+            }
+
+            // Set headers for XLSX download
+            response.setHeader({
+                name: 'Content-Type',
+                value: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
             });
+            response.setHeader({
+                name: 'Content-Disposition',
+                value: 'attachment; filename=' + FileName
+            });
+
+            // Fetch and write search results to an XLSX file
+            processSavedSearchData(response, XLSX, typeName, filters, columns);
+        } catch (e) {
+            logError(response, e);
         }
-
-        // Set headers for XLSX download
-        response.setHeader({
-            name: 'Content-Type',
-            value: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-        });
-        response.setHeader({
-            name: 'Content-Disposition',
-            value: 'attachment; filename=' + FileName
-        });
-
-        // Fetch and write search results to an XLSX file
-        processSavedSearchData(response, XLSX, typeName, filters, columns);
     }
 
     function processSavedSearchData(response, XLSX, typeName, filters, columns) {
@@ -72,7 +69,7 @@ function(search, format, XLSX) {
 
         // Add the headers
         var headers = columns.map(function(column) {
-            return column.label || column.name; // Use label if available, otherwise fallback to name
+            return column.label || column.name;
         });
         worksheetData.push(headers);
 
@@ -99,7 +96,15 @@ function(search, format, XLSX) {
         // Write the base64 string directly to the response
         response.write({
             output: xlsxData,
-            encoding: 'base64' // Use 'base64' encoding
+            encoding: 'base64'
+        });
+    }
+
+    function logError(response, error) {
+        log.error({ title: 'Error in Suitelet', details: error.message });
+        response.write({
+            output: JSON.stringify({ status: 'error', message: error.message }),
+            encoding: 'UTF-8'
         });
     }
 
