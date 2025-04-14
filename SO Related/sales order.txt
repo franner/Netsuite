@@ -1,0 +1,55 @@
+Item
+Pos
+Available
+On Hand
+Quantity
+OE-Quantity on order
+Units
+Inventory Detail
+Description
+Price Level
+Rate
+Amount
+Gross Amt
+Options
+Create PO
+Tax Amount
+PO Vendor
+EXW Delivery Date
+Create WO
+Closed
+Project Schedule
+Sub Project
+Cost Estimate Type
+Est. Unit Cost
+Est. Extended Cost
+Est. Gross Profit
+Est. Gross Profit Percent
+Hist. Unit cost
+Hist. Extended cost
+Committed
+Picked
+Packed
+Fulfilled
+Invoiced
+Back Ordered
+Outsourced fully/partially
+Vendor
+Tax Details Reference
+History
+Text	 	 	 	 	 	 	 	- Vejecelle system med div
+Leveringstid 8-10 uger	 	 	 	 	 	    	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	 	History
+1854-A03	02	2	0	2	 	Pcs	 	Load Cell System for Disc Cooker ODD260
+Med Bus	Custom	102.675,00	205.350,00	256.687,50	 	    	51.337,50	 	 	WO65315	 	 	 	Derived From Member Items	34.456,00	68.912,00	136.438,00	66,4417%	 	 	0	2	2	2	2	0	 	 	11224570_2	History
+VAR00388	 	2	0	2	 	Pcs	 	SS Compensator Ø406.4mm L=200mm	Custom	0,00	0,00	0,00	 	    	0,00	 	 	 	 	 	 	Custom	3.050,00	6.100,00	-6.100,00	 	 	 	0	2	2	2	2	0	 	 	11224570_16	History
+DUMMY-sales1	03	 	 	2	 	Pcs	 	Diverse aflastninger og DN400 rustfri kompensator for afdamprør.	Custom	19.605,00	39.210,00	49.012,50	 	    	9.802,50	 	 	 	 	 	 	Custom	5.500,00	11.000,00	28.210,00	71,9459%	 	 	 	 	 	 	2	 	 	 	11224570_5	History
+DUMMY-sales1	04	 	 	8	 	Pcs	 	Føder og montage del på veje selle, ændres til rustfri. Der lægges en teflon plade under hvor den skal kunne glide.
+Custom	2.561,00	20.488,00	25.610,00	 	    	5.122,00	 	 	 	 	 	 	Custom	1.875,00	15.000,00	5.488,00	26,7864%	 	 	 	 	 	 	8	 	 	 	11224570_6	History
+3234-MO	 	1	0	1	 	Pcs	 	 	Custom	0,00	0,00	0,00	 	    	0,00	 	 	WO70607	 	 	 	Average Cost	0,00	0,00	0,00	 	 	 	0	1	1	1	1	0	 	 	11224570_13	History
+3234-Kabelbakker	 	1	0	1	 	 	 	Flytning af kabelbakker på tørrer.
+Samt nye, til alle 8 ben.
+Lavet efter anvisning af elektriker på Daka.	Custom	7.820,00	7.820,00	9.775,00	 	    	1.955,00	 	 	WO70994	 	 	 	Custom	5.600,00	5.600,00	2.220,00	28,3887%	 	 	0	1	1	1	1	0	 	 	11224570_18	History
+VAR00394	 	1	0	1	 	Pcs	 	SA 3234 - Hydraulic Hose Set	Custom	0,00	0,00	0,00	 	    	0,00	 	 	 	 	 	 	Average Cost	1.459,18	1.459,18	-1.459,18	 	 	 	0	1	1	1	1	0	 	 	11224570_21	History
+DUMMY-sales1	 	 	 	1	 	Pcs	 	10mm plade under alle tørre ben.
+Samt montage at samme.
+Tørre løftes og plader skubes ind mellem tørre ben og platform. 477 KG Rustfri.	Custom	31.545,00	31.545,00	39.431,25	 	    	7.886,25	 	 	 	 	 	 	Custom	25.000,00	25.000,00	6.545,00	20,7481%	 	 	 	 	 	 	1	 	 	 	11224570_23	History

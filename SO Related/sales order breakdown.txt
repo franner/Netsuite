@@ -1,0 +1,241 @@
+Transaction ID	Type	Posting	Currency	Item Name	Debit Amount	Debit Account	Credit Amount	Credit Account
+140514	workordercompletion	true	Unknown	Man hour cost DK	0.00	N/A	1672.64	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+140514	workordercompletion	true	Unknown	Man hour cost DK	1672.64	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+99628	workorderissue	true	Unknown	RFVR200	0.00	N/A	6015.60	83100 TOTAL INVENTORIES : Inventory increase
+99628	workorderissue	true	Unknown	RFVR200	6015.60	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+99794	workorderissue	true	Unknown	RAVB20004000-30	0.00	N/A	2224.93	83100 TOTAL INVENTORIES : Inventory increase
+99794	workorderissue	true	Unknown	RAVB20004000-30	2224.93	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+140775	workordercompletion	true	Unknown	Man hour cost DK	0.00	N/A	1287.50	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+140775	workordercompletion	true	Unknown	Man hour cost DK	1287.50	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+99806	workorderissue	true	Unknown	RAVB20004000-30	0.00	N/A	741.64	83100 TOTAL INVENTORIES : Inventory increase
+99806	workorderissue	true	Unknown	RAVB20004000-30	741.64	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+99908	workorderissue	true	Unknown	RAVB20004000-10	0.00	N/A	2544.86	83100 TOTAL INVENTORIES : Inventory increase
+99908	workorderissue	true	Unknown	RAVB20004000-10	2544.86	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+140981	workordercompletion	true	Unknown	Man hour cost DK	0.00	N/A	1206.25	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+140981	workordercompletion	true	Unknown	Man hour cost DK	1206.25	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+141084	workordercompletion	true	Unknown	Man hour cost DK	0.00	N/A	2175.00	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+141084	workordercompletion	true	Unknown	Man hour cost DK	2175.00	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+141096	workordercompletion	true	Unknown	Man hour cost DK	0.00	N/A	706.25	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+141096	workordercompletion	true	Unknown	Man hour cost DK	706.25	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+141143	workordercompletion	true	Unknown	001-042-327	4530.28	83100 TOTAL INVENTORIES : Inventory increase	0.00	N/A
+141143	workordercompletion	true	Unknown	001-042-327	0.00	N/A	4530.28	83250 TOTAL INVENTORIES : Products being manufactured
+141143	workordercompletion	true	Unknown	Man hour cost DK CNC	0.00	N/A	779.17	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+141143	workordercompletion	true	Unknown	Man hour cost DK CNC	779.17	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+141189	workordercompletion	true	Unknown	Man hour cost DK	0.00	N/A	2381.25	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+141189	workordercompletion	true	Unknown	Man hour cost DK	2381.25	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+141187	workordercompletion	true	Unknown	Man hour cost DK	0.00	N/A	2443.75	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+141187	workordercompletion	true	Unknown	Man hour cost DK	2443.75	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+141300	workordercompletion	true	Unknown	Man hour cost DK CNC	0.00	N/A	2280.83	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+141300	workordercompletion	true	Unknown	Man hour cost DK CNC	2280.83	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+141301	workordercompletion	true	Unknown	Man hour cost DK	0.00	N/A	562.50	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+141301	workordercompletion	true	Unknown	Man hour cost DK	562.50	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+64616	workorderclose	true	Unknown	001-042-327	4530.28	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+64616	workorderclose	true	Unknown	RAVB20004000-10	0.00	N/A	2544.86	83250 TOTAL INVENTORIES : Products being manufactured
+64616	workorderclose	true	Unknown	Man hour cost DK	0.00	N/A	1206.25	83250 TOTAL INVENTORIES : Products being manufactured
+64616	workorderclose	true	Unknown	Man hour cost DK CNC	0.00	N/A	779.17	83250 TOTAL INVENTORIES : Products being manufactured
+141368	workordercompletion	true	Unknown	Man hour cost DK	0.00	N/A	1731.25	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+141368	workordercompletion	true	Unknown	Man hour cost DK	1731.25	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+141434	workordercompletion	true	Unknown	Man hour cost DK	0.00	N/A	2087.50	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+141434	workordercompletion	true	Unknown	Man hour cost DK	2087.50	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+141452	workordercompletion	true	Unknown	Man hour cost DK	0.00	N/A	6.25	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+141452	workordercompletion	true	Unknown	Man hour cost DK	6.25	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+100224	workorderissue	true	Unknown	ISO 4017-M16x80 A2	0.00	N/A	158.20	83100 TOTAL INVENTORIES : Inventory increase
+100224	workorderissue	true	Unknown	ISO 4017-M16x80 A2	158.20	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+100224	workorderissue	true	Unknown	ISO 4762-M16x45 A2	0.00	N/A	92.22	83100 TOTAL INVENTORIES : Inventory increase
+100224	workorderissue	true	Unknown	ISO 4762-M16x45 A2	92.22	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+100224	workorderissue	true	Unknown	LCC0017	0.00	N/A	56608.00	83100 TOTAL INVENTORIES : Inventory increase
+100224	workorderissue	true	Unknown	LCC0017	56608.00	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+100224	workorderissue	true	Unknown	ISO 4032-M16 A2	0.00	N/A	34.66	83100 TOTAL INVENTORIES : Inventory increase
+100224	workorderissue	true	Unknown	ISO 4032-M16 A2	34.66	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+100224	workorderissue	true	Unknown	001-042-327	0.00	N/A	4530.28	83100 TOTAL INVENTORIES : Inventory increase
+100224	workorderissue	true	Unknown	001-042-327	4530.28	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+100224	workorderissue	true	Unknown	ISO 7090-M16 A2	0.00	N/A	34.79	83100 TOTAL INVENTORIES : Inventory increase
+100224	workorderissue	true	Unknown	ISO 7090-M16 A2	34.79	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+141552	workordercompletion	true	Unknown	Man hour cost DK	0.00	N/A	206.25	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+141552	workordercompletion	true	Unknown	Man hour cost DK	206.25	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+141640	workordercompletion	true	Unknown	125-011-087	10578.23	83100 TOTAL INVENTORIES : Inventory increase	0.00	N/A
+141640	workordercompletion	true	Unknown	125-011-087	0.00	N/A	10578.23	83250 TOTAL INVENTORIES : Products being manufactured
+141640	workordercompletion	true	Unknown	Man hour cost DK CNC	0.00	N/A	304.58	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+141640	workordercompletion	true	Unknown	Man hour cost DK CNC	304.58	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+141635	workordercompletion	true	Unknown	Man hour cost DK	0.00	N/A	512.50	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+141635	workordercompletion	true	Unknown	Man hour cost DK	512.50	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+100324	workorderissue	true	Unknown	RAVB20004000-50	0.00	N/A	5505.74	83100 TOTAL INVENTORIES : Inventory increase
+100324	workorderissue	true	Unknown	RAVB20004000-50	5505.74	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+141636	workordercompletion	true	Unknown	125-011-078	12930.74	83100 TOTAL INVENTORIES : Inventory increase	0.00	N/A
+141636	workordercompletion	true	Unknown	125-011-078	0.00	N/A	12930.74	83250 TOTAL INVENTORIES : Products being manufactured
+141636	workordercompletion	true	Unknown	Man hour cost DK	0.00	N/A	268.75	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+141636	workordercompletion	true	Unknown	Man hour cost DK	268.75	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+141638	workordercompletion	true	Unknown	125-011-076	7672.82	83100 TOTAL INVENTORIES : Inventory increase	0.00	N/A
+141638	workordercompletion	true	Unknown	125-011-076	0.00	N/A	7672.82	83250 TOTAL INVENTORIES : Products being manufactured
+141638	workordercompletion	true	Unknown	Man hour cost DK	0.00	N/A	268.75	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+141638	workordercompletion	true	Unknown	Man hour cost DK	268.75	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+141639	workordercompletion	true	Unknown	Man hour cost DK CNC	0.00	N/A	304.58	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+141639	workordercompletion	true	Unknown	Man hour cost DK CNC	304.58	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+100325	workorderissue	true	Unknown	2920201512	0.00	N/A	6287.74	83100 TOTAL INVENTORIES : Inventory increase
+100325	workorderissue	true	Unknown	2920201512	6287.74	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+141645	workordercompletion	true	Unknown	125-011-079	9100.24	83100 TOTAL INVENTORIES : Inventory increase	0.00	N/A
+141645	workordercompletion	true	Unknown	125-011-079	0.00	N/A	9100.24	83250 TOTAL INVENTORIES : Products being manufactured
+141645	workordercompletion	true	Unknown	Man hour cost DK	0.00	N/A	268.75	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+141645	workordercompletion	true	Unknown	Man hour cost DK	268.75	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+141720	workordercompletion	true	Unknown	Man hour cost DK	0.00	N/A	243.75	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+141720	workordercompletion	true	Unknown	Man hour cost DK	243.75	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+64744	workorderclose	true	Unknown	125-011-087	10578.23	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+64744	workorderclose	true	Unknown	RFVR200	0.00	N/A	6015.60	83250 TOTAL INVENTORIES : Products being manufactured
+64744	workorderclose	true	Unknown	Man hour cost DK	0.00	N/A	1672.64	83250 TOTAL INVENTORIES : Products being manufactured
+64744	workorderclose	true	Unknown	Man hour cost DK CNC	0.00	N/A	2585.41	83250 TOTAL INVENTORIES : Products being manufactured
+64744	workorderclose	true	Unknown	Man hour cost DK CNC	0.00	N/A	304.58	83250 TOTAL INVENTORIES : Products being manufactured
+64745	workorderclose	true	Unknown	125-011-078	12930.74	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+64745	workorderclose	true	Unknown	RAVB20004000-50	0.00	N/A	5505.74	83250 TOTAL INVENTORIES : Products being manufactured
+64745	workorderclose	true	Unknown	Man hour cost DK	0.00	N/A	512.50	83250 TOTAL INVENTORIES : Products being manufactured
+64745	workorderclose	true	Unknown	Man hour cost DK	0.00	N/A	6912.50	83250 TOTAL INVENTORIES : Products being manufactured
+64746	workorderclose	true	Unknown	125-011-079	9100.24	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+64746	workorderclose	true	Unknown	2920201512	0.00	N/A	6287.74	83250 TOTAL INVENTORIES : Products being manufactured
+64746	workorderclose	true	Unknown	Man hour cost DK	0.00	N/A	250.00	83250 TOTAL INVENTORIES : Products being manufactured
+64746	workorderclose	true	Unknown	Man hour cost DK	0.00	N/A	2562.50	83250 TOTAL INVENTORIES : Products being manufactured
+64747	workorderclose	true	Unknown	125-011-076	7672.82	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+64747	workorderclose	true	Unknown	RAVB20004000-30	0.00	N/A	2966.57	83250 TOTAL INVENTORIES : Products being manufactured
+64747	workorderclose	true	Unknown	Man hour cost DK	0.00	N/A	1287.50	83250 TOTAL INVENTORIES : Products being manufactured
+64747	workorderclose	true	Unknown	Man hour cost DK	0.00	N/A	3150.00	83250 TOTAL INVENTORIES : Products being manufactured
+64747	workorderclose	true	Unknown	Man hour cost DK	0.00	N/A	268.75	83250 TOTAL INVENTORIES : Products being manufactured
+141798	workordercompletion	true	Unknown	125-010-040	102146.43	83100 TOTAL INVENTORIES : Inventory increase	0.00	N/A
+141798	workordercompletion	true	Unknown	125-010-040	0.00	N/A	102146.43	83250 TOTAL INVENTORIES : Products being manufactured
+141798	workordercompletion	true	Unknown	Man hour cost DK	0.00	N/A	200.00	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+141798	workordercompletion	true	Unknown	Man hour cost DK	200.00	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+100409	workorderissue	true	Unknown	125-011-087	0.00	N/A	10578.23	83100 TOTAL INVENTORIES : Inventory increase
+100409	workorderissue	true	Unknown	125-011-087	10578.23	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+100409	workorderissue	true	Unknown	125-011-078	0.00	N/A	12930.74	83100 TOTAL INVENTORIES : Inventory increase
+100409	workorderissue	true	Unknown	125-011-078	12930.74	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+100409	workorderissue	true	Unknown	125-011-079	0.00	N/A	9100.24	83100 TOTAL INVENTORIES : Inventory increase
+100409	workorderissue	true	Unknown	125-011-079	9100.24	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+100409	workorderissue	true	Unknown	125-011-076	0.00	N/A	7672.82	83100 TOTAL INVENTORIES : Inventory increase
+100409	workorderissue	true	Unknown	125-011-076	7672.82	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+100411	workorderissue	true	Unknown	LCC0012-Pro	0.00	N/A	12304.00	83100 TOTAL INVENTORIES : Inventory increase
+100411	workorderissue	true	Unknown	LCC0012-Pro	12304.00	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+100411	workorderissue	true	Unknown	125-010-040	0.00	N/A	102146.43	83100 TOTAL INVENTORIES : Inventory increase
+100411	workorderissue	true	Unknown	125-010-040	102146.43	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+141799	workordercompletion	true	Unknown	1854-A03	114650.43	83100 TOTAL INVENTORIES : Inventory increase	0.00	N/A
+141799	workordercompletion	true	Unknown	1854-A03	0.00	N/A	114650.43	83250 TOTAL INVENTORIES : Products being manufactured
+141799	workordercompletion	true	Unknown	Man hour cost DK	0.00	N/A	200.00	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+141799	workordercompletion	true	Unknown	Man hour cost DK	200.00	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+64784	workorderclose	true	Unknown	1854-A03	114650.43	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+64784	workorderclose	true	Unknown	LCC0012-Pro	0.00	N/A	12304.00	83250 TOTAL INVENTORIES : Products being manufactured
+64784	workorderclose	true	Unknown	125-010-040	0.00	N/A	102146.43	83250 TOTAL INVENTORIES : Products being manufactured
+64784	workorderclose	true	Unknown	Man hour cost DK	0.00	N/A	200.00	83250 TOTAL INVENTORIES : Products being manufactured
+64841	workorderclose	true	Unknown	125-010-040	102146.43	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+64841	workorderclose	true	Unknown	125-011-087	0.00	N/A	10578.23	83250 TOTAL INVENTORIES : Products being manufactured
+64841	workorderclose	true	Unknown	125-011-078	0.00	N/A	12930.74	83250 TOTAL INVENTORIES : Products being manufactured
+64841	workorderclose	true	Unknown	ISO 4017-M16x80 A2	0.00	N/A	158.20	83250 TOTAL INVENTORIES : Products being manufactured
+64841	workorderclose	true	Unknown	ISO 4762-M16x45 A2	0.00	N/A	92.22	83250 TOTAL INVENTORIES : Products being manufactured
+64841	workorderclose	true	Unknown	LCC0017	0.00	N/A	56608.00	83250 TOTAL INVENTORIES : Products being manufactured
+64841	workorderclose	true	Unknown	125-011-079	0.00	N/A	9100.24	83250 TOTAL INVENTORIES : Products being manufactured
+64841	workorderclose	true	Unknown	ISO 4032-M16 A2	0.00	N/A	34.66	83250 TOTAL INVENTORIES : Products being manufactured
+64841	workorderclose	true	Unknown	001-042-327	0.00	N/A	4530.28	83250 TOTAL INVENTORIES : Products being manufactured
+64841	workorderclose	true	Unknown	ISO 7090-M16 A2	0.00	N/A	34.79	83250 TOTAL INVENTORIES : Products being manufactured
+64841	workorderclose	true	Unknown	125-011-076	0.00	N/A	7672.82	83250 TOTAL INVENTORIES : Products being manufactured
+64841	workorderclose	true	Unknown	Man hour cost DK	0.00	N/A	406.25	83250 TOTAL INVENTORIES : Products being manufactured
+142236	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	2066.67	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+142236	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	2066.67	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+142308	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	1466.67	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+142308	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	1466.67	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+DN4561	itemfulfillment	true	Unknown	1854-A03	114650.43	20500 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Consumption of finished goods	0.00	N/A
+DN4561	itemfulfillment	true	Unknown	1854-A03	0.00	N/A	114650.43	83100 TOTAL INVENTORIES : Inventory increase
+142586	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	4308.33	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+142586	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	4308.33	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+142833	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	3791.67	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+142833	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	3791.67	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+142914	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	4883.33	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+142914	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	4883.33	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+142918	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	4583.33	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+142918	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	4583.33	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+143076	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	8716.67	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+143076	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	8716.67	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+143165	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	1219.17	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+143165	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	1219.17	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+143167	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	2814.17	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+143167	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	2814.17	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+143277	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	4317.50	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+143277	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	4317.50	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+143278	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	5358.33	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+143278	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	5358.33	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+143331	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	1127.50	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+143331	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	1127.50	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+103783	workorderissue	true	Unknown	HOTEL/DK	0.00	N/A	10820.00	83100 TOTAL INVENTORIES : Inventory increase
+103783	workorderissue	true	Unknown	HOTEL/DK	10820.00	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+147814	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	333.33	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+147814	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	333.33	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+148119	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	10853.33	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+148119	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	10853.33	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+148329	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	10532.50	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+148329	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	10532.50	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+148356	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	1416.67	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+148356	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	1416.67	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+148513	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	12210.00	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+148513	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	12210.00	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+148667	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	12430.00	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+148667	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	12430.00	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+148677	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	12549.17	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+148677	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	12549.17	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+148880	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	12512.50	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+148880	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	12512.50	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+149151	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	12485.00	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+149151	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	12485.00	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+149398	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	6875.00	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+149398	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	6875.00	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+149399	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	6250.00	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+149399	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	6250.00	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+149659	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	6766.67	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+149659	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	6766.67	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+149660	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	7489.17	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+149660	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	7489.17	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+149721	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	1347.50	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+149721	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	1347.50	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+149722	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	1458.33	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+149722	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	1458.33	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+151440	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	26966.67	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+151440	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	26966.67	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+151937	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	10958.33	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+151937	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	10958.33	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+152172	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	12650.00	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+152172	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	12650.00	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+153678	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	6525.00	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+153678	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	6525.00	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+153897	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	6483.33	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+153897	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	6483.33	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+154100	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	6591.67	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+154100	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	6591.67	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+12802	invoice	true	Unknown	Unknown	380516.25	85100 TOTAL RECEIVABLES : Receivables from sales	0.00	N/A
+12802	invoice	true	Unknown	1854-A03	0.00	N/A	205350.00	10100 TOTAL SALES : Project Sales
+12802	invoice	true	Unknown	DUMMY-sales1	0.00	N/A	39210.00	10000 TOTAL SALES
+12802	invoice	true	Unknown	DUMMY-sales1	0.00	N/A	20488.00	10000 TOTAL SALES
+12802	invoice	true	Unknown	3234-Kabelbakker	0.00	N/A	7820.00	10100 TOTAL SALES : Project Sales
+12802	invoice	true	Unknown	DUMMY-sales1	0.00	N/A	31545.00	10000 TOTAL SALES
+12802	invoice	true	Unknown	UD-DK	0.00	N/A	76103.25	95200 TOTAL VAT & TAX ETC. : Outgoing VAT (DK)
+PAYMENT1388	customerpayment	true	Unknown	Unknown	1076431.25	89300 Oestergaard A/S Nykredit Erhverv DK8954710002108307	0.00	N/A
+PAYMENT1388	customerpayment	true	Unknown	Unknown	0.00	N/A	1076431.25	85100 TOTAL RECEIVABLES : Receivables from sales
+165584	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	2191.67	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+165584	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	2191.67	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+165689	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	6725.00	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+165689	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	6725.00	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+118997	workorderissue	true	Unknown	HOTEL/DK	0.00	N/A	1871.61	83100 TOTAL INVENTORIES : Inventory increase
+118997	workorderissue	true	Unknown	HOTEL/DK	1871.61	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+175559	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	320.83	20890 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Direct Labor (overføres til varer i arbejde)
+175559	workordercompletion	true	Unknown	Man Hour Cost DK Montage Ude	320.83	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+185069	workordercompletion	true	Unknown	3234-Kabelbakker	110954.95	83100 TOTAL INVENTORIES : Inventory increase	0.00	N/A
+185069	workordercompletion	true	Unknown	3234-Kabelbakker	0.00	N/A	110954.95	83250 TOTAL INVENTORIES : Products being manufactured
+79269	workorderclose	true	Unknown	3234-Kabelbakker	110954.95	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+79269	workorderclose	true	Unknown	HOTEL/DK	0.00	N/A	1871.61	83250 TOTAL INVENTORIES : Products being manufactured
+79269	workorderclose	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	109083.34	83250 TOTAL INVENTORIES : Products being manufactured
+199701	workordercompletion	true	Unknown	3234-MO	141311.67	83100 TOTAL INVENTORIES : Inventory increase	0.00	N/A
+199701	workordercompletion	true	Unknown	3234-MO	0.00	N/A	141311.67	83250 TOTAL INVENTORIES : Products being manufactured
+84473	workorderclose	true	Unknown	3234-MO	141311.67	83250 TOTAL INVENTORIES : Products being manufactured	0.00	N/A
+84473	workorderclose	true	Unknown	HOTEL/DK	0.00	N/A	10820.00	83250 TOTAL INVENTORIES : Products being manufactured
+84473	workorderclose	true	Unknown	Man Hour Cost DK Montage Ude	0.00	N/A	130491.67	83250 TOTAL INVENTORIES : Products being manufactured
+13761	invoice	true	Unknown	No items
+DN6941	itemfulfillment	true	Unknown	VAR00388	6100.00	20500 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Consumption of finished goods	0.00	N/A
+DN6941	itemfulfillment	true	Unknown	VAR00388	0.00	N/A	6100.00	83100 TOTAL INVENTORIES : Inventory increase
+DN6941	itemfulfillment	true	Unknown	3234-MO	141311.67	20500 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Consumption of finished goods	0.00	N/A
+DN6941	itemfulfillment	true	Unknown	3234-MO	0.00	N/A	141311.67	83100 TOTAL INVENTORIES : Inventory increase
+DN6941	itemfulfillment	true	Unknown	3234-Kabelbakker	110954.95	20500 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Consumption of finished goods	0.00	N/A
+DN6941	itemfulfillment	true	Unknown	3234-Kabelbakker	0.00	N/A	110954.95	83100 TOTAL INVENTORIES : Inventory increase
+DN7271	itemfulfillment	true	Unknown	VAR00394	1459.18	20500 TOTAL PRODUCTION COSTS : TOTAL DIRECT PRODUCTION COSTS : Consumption of finished goods	0.00	N/A
+DN7271	itemfulfillment	true	Unknown	VAR00394	0.00	N/A	1459.18	83100 TOTAL INVENTORIES : Inventory increase
